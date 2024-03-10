@@ -1,95 +1,68 @@
-import Image from "next/image";
+'use client';
+import * as React from 'react';
 import styles from "./page.module.css";
+import Container from '@mui/material/Container';
+import Drawer from '@mui/material/Drawer';
+import IconButton from '@mui/material/IconButton';
+import Avatar from '@mui/material/Avatar';
+
+import WidgetsSharpIcon from '@mui/icons-material/WidgetsSharp';
+import Button from '@mui/material/Button';
+import { HistoryToggleOffSharp, InsertPhotoSharp, PetsSharp } from '@mui/icons-material';
+import { useRouter } from 'next/navigation';
+
 
 export default function Home() {
+  const [open,setOpen] = React.useState(false);
+
+  const abrirDrawer = (open) =>()=>{
+    setOpen(open);
+  };
+
+  const router = useRouter();
+
   return (
-    <main className={styles.main}>
-      <div className={styles.description}>
-        <p>
-          Get started by editing&nbsp;
-          <code className={styles.code}>src/app/page.js</code>
-        </p>
-        <div>
-          <a
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            By{" "}
-            <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className={styles.vercelLogo}
-              width={100}
-              height={24}
-              priority
-            />
-          </a>
-        </div>
-      </div>
-
-      <div className={styles.center}>
-        <Image
-          className={styles.logo}
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
-        />
-      </div>
-
-      <div className={styles.grid}>
-        <a
-          href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Docs <span>-&gt;</span>
-          </h2>
-          <p>Find in-depth information about Next.js features and API.</p>
-        </a>
-
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Learn <span>-&gt;</span>
-          </h2>
-          <p>Learn about Next.js in an interactive course with&nbsp;quizzes!</p>
-        </a>
-
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Templates <span>-&gt;</span>
-          </h2>
-          <p>Explore starter templates for Next.js.</p>
-        </a>
-
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Deploy <span>-&gt;</span>
-          </h2>
-          <p>
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
-          </p>
-        </a>
-      </div>
-    </main>
+    <Container maxWidth="lg" className={styles.bgPrimary} sx={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', direction: 'initial', margin: 0 }}>
+      <IconButton aria-label="menu" sx={{fontSize:'large',color:'#397c5d', marginLeft: -1}} onClick={abrirDrawer(true)}>
+        <WidgetsSharpIcon/> Menu
+      </IconButton>
+      <Avatar alt='DEKU' src='/img/Deku0.jpeg' sx={{marginRight:0,width:35, height:35}}></Avatar>
+      <Drawer
+        anchor="left"
+        open={open}
+        onClose={abrirDrawer(false)}
+        sx={{backgroundColor:'rgba(0,0,0, 0.5)'}}
+      >
+        <Button
+        className={styles.primary}   
+          size='medium' 
+          sx={{margin:'0.5rem'}}   
+          onClick={() =>router.push('/')}  
+        > Inicio
+        </Button>
+        <Button
+        className={styles.primary}
+          startIcon={<HistoryToggleOffSharp/>}    
+          size='medium' 
+          sx={{margin:'0.5rem'}}   
+          onClick={() =>router.push('/pages/history')}  
+        > Historia
+        </Button>
+        <Button
+          className={styles.primary}
+          startIcon={<PetsSharp/>}    
+          size='medium' 
+          sx={{margin:'0.5rem'}}     
+        > Lazzy
+        </Button>
+        <Button
+          className={styles.primary}
+          startIcon={<InsertPhotoSharp/>}    
+          size='medium' 
+          sx={{margin:'0.5rem'}}     
+        > Fotos
+        </Button>
+      </Drawer>      
+    </Container>
   );
 }

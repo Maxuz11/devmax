@@ -10,6 +10,8 @@ import WidgetsSharpIcon from '@mui/icons-material/WidgetsSharp';
 import Button from '@mui/material/Button';
 import { HistoryToggleOffSharp, InsertPhotoSharp, PetsSharp } from '@mui/icons-material';
 import { useRouter } from 'next/navigation';
+import { Typography } from '@mui/material'
+
 
 
 export default function Home() {
@@ -22,10 +24,11 @@ export default function Home() {
   const router = useRouter();
 
   return (
-    <Container maxWidth="lg" className={styles.bgPrimary} sx={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', direction: 'initial', margin: 0 }}>
+    <Container maxWidth="fluid" className={styles.bgPrimary} sx={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', direction: 'initial', margin: 0 }}>
       <IconButton aria-label="menu" sx={{fontSize:'large',color:'#397c5d', marginLeft: -1}} onClick={abrirDrawer(true)}>
         <WidgetsSharpIcon/> Menu
       </IconButton>
+      <Typography className={styles.primary} sx={{marginLeft:-3, fontFamily:'Raleway,Helvetica',fontWeight:'bolder',fontSize:30,fontStyle:'oblique'}}>DEKU PAGE</Typography>
       <Avatar alt='DEKU' src='/img/Deku0.jpeg' sx={{marginRight:0,width:35, height:35}}></Avatar>
       <Drawer
         anchor="left"

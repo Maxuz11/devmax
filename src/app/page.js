@@ -9,9 +9,8 @@ import Avatar from '@mui/material/Avatar';
 import WidgetsSharpIcon from '@mui/icons-material/WidgetsSharp';
 import Button from '@mui/material/Button';
 import { HistoryToggleOffSharp, InsertPhotoSharp, PetsSharp } from '@mui/icons-material';
-import { useRouter } from 'next/navigation';
 import { Typography } from '@mui/material'
-
+import Link from 'next/link';
 
 
 export default function Home() {
@@ -21,7 +20,7 @@ export default function Home() {
     setOpen(open);
   };
 
-  const router = useRouter();
+
 
   return (
     <Container maxWidth="fluid" className={styles.bgPrimary} sx={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', direction: 'initial', margin: 0 }}>
@@ -39,17 +38,15 @@ export default function Home() {
         <Button
         className={styles.primary}   
           size='medium' 
-          sx={{margin:'0.8rem'}}   
-          onClick={() =>router.push('/')}  
-        > Inicio
+          sx={{margin:'0.8rem'}} 
+        > <Link href="/" style={{textDecoration:'none'}}>Inicio</Link>
         </Button>
         <Button
         className={styles.primary}
           startIcon={<HistoryToggleOffSharp/>}    
           size='medium' 
           sx={{margin:'0.8rem'}}   
-          onClick={() =>router.push('/pages/history')}  
-        > Historia
+        > <Link href="/pages/history" style={{textDecoration:'none'}}>Historia</Link>
         </Button>
         <Button
           className={styles.primary}

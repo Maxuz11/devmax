@@ -25,10 +25,10 @@ export default function Home() {
 
   return (
     <Container maxWidth="fluid" className={styles.bgPrimary} sx={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', direction: 'initial', margin: 0 }}>
-      <IconButton aria-label="menu" sx={{fontSize:'large',color:'#397c5d', marginLeft: -1}} onClick={abrirDrawer(true)}>
+      <IconButton aria-label="menu" sx={{fontSize:'large',color:'black', marginLeft: -1}} onClick={abrirDrawer(true)}>
         <WidgetsSharpIcon/> Menu
       </IconButton>
-      <Typography className={styles.primary} sx={{marginLeft:-3, fontFamily:'Raleway,Helvetica',fontWeight:'bolder',fontSize:30,fontStyle:'oblique'}}>DEKU PAGE</Typography>
+      <Typography sx={{marginLeft:-3,color:'black',fontFamily:'Raleway,Helvetica',fontWeight:'bolder',fontSize:30,fontStyle:'oblique'}}>DEKU PAGE</Typography>
       <Avatar alt='DEKU' src='/img/Deku0.jpeg' sx={{marginRight:0,width:35, height:35}}></Avatar>
       <Drawer
         anchor="left"
@@ -39,7 +39,7 @@ export default function Home() {
         <Button
         className={styles.primary}   
           size='medium' 
-          sx={{margin:'0.5rem'}}   
+          sx={{margin:'0.8rem'}}   
           onClick={() =>router.push('/')}  
         > Inicio
         </Button>
@@ -47,7 +47,7 @@ export default function Home() {
         className={styles.primary}
           startIcon={<HistoryToggleOffSharp/>}    
           size='medium' 
-          sx={{margin:'0.5rem'}}   
+          sx={{margin:'0.8rem'}}   
           onClick={() =>router.push('/pages/history')}  
         > Historia
         </Button>
@@ -55,14 +55,14 @@ export default function Home() {
           className={styles.primary}
           startIcon={<PetsSharp/>}    
           size='medium' 
-          sx={{margin:'0.5rem'}}     
+          sx={{margin:'0.8rem'}}     
         > Lazzy
         </Button>
         <Button
           className={styles.primary}
           startIcon={<InsertPhotoSharp/>}    
           size='medium' 
-          sx={{margin:'0.5rem'}}     
+          sx={{margin:'0.8rem'}}     
         > Fotos
         </Button>
       </Drawer>      

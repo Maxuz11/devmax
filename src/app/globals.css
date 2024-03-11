@@ -16,3 +16,14 @@ body {
     color-scheme: ligth;
   }
 }
+
+@keyframes fade-in {
+  from {
+    background: #9BB0A5;
+    opacity: 1;
+  }
+  to {
+    background-color: #397C5D;
+    opacity: 2;
+  }
+}

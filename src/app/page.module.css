@@ -18,13 +18,13 @@
   box-shadow : 0 5px 20px rgba(0,0,0,0.5);
   transition : 0.3s ease-in-out;
   border-radius : 15px;
+  border-left: #397c5d groove 2px;
 }
 
 .image {
   position : relative;
-  width : 260px;
-  height : 50vh;  
-  margin-top: -5%;
+  width : 280;
+  margin-top: -15%;
   padding: 2rem;
   left: 2px;
   box-shadow : 0 5px 20px rgba(0,0,0,0.2);
@@ -33,7 +33,7 @@
  
 .cardInit .content{
   position : relative;
-  padding : 1rem;
+  padding : 0.5rem 1rem;
   color : #111;
   text-align : center;  
   visibility : hidden;
@@ -41,7 +41,8 @@
   transition : 0.3s ease-in-out;    
 } 
 .cardInit:hover{
-  height : 320px;  
+  height : 320px; 
+  border-bottom: #397c5d groove 3px; 
 }
 
 .cardInit:hover .content{

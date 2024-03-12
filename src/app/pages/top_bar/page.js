@@ -51,7 +51,7 @@ function Menu(){
       sx={{margin:'0.8rem'}}   
     > <Link href="/pages/history" style={{textDecoration:'none'}}>Historia</Link>
     </Button>
-    <Button
+    {/* <Button
       className={styles.primary}
       startIcon={<PetsSharp/>}    
       size='medium' 
@@ -64,7 +64,7 @@ function Menu(){
       size='medium' 
       sx={{margin:'0.8rem'}}     
     > Fotos
-    </Button>
+    </Button> */}
   </Drawer> </>
   );
 }

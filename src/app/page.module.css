@@ -6,3 +6,45 @@
   background-color: #9ac9c1;
 }
 
+.cardInit{
+  position: relative;
+  max-width : 300px;
+  height : 215px;  
+  background-color : #fff;
+  margin : 30px 10px;
+  padding : 20px 15px;  
+  display : flex;
+  flex-direction : column;
+  box-shadow : 0 5px 20px rgba(0,0,0,0.5);
+  transition : 0.3s ease-in-out;
+  border-radius : 15px;
+}
+
+.image {
+  position : relative;
+  width : 260px;
+  height : 50vh;  
+  margin-top: -5%;
+  padding: 2rem;
+  left: 2px;
+  box-shadow : 0 5px 20px rgba(0,0,0,0.2);
+  z-index : 1;
+}
+ 
+.cardInit .content{
+  position : relative;
+  padding : 1rem;
+  color : #111;
+  text-align : center;  
+  visibility : hidden;
+  opacity : 1;
+  transition : 0.3s ease-in-out;    
+} 
+.cardInit:hover{
+  height : 320px;  
+}
+
+.cardInit:hover .content{
+  visibility : visible;
+  opacity : 1;  
+}

@@ -1,4 +1,4 @@
-import Menu from "../../page";
+import Menu from '../top_bar/page';
 import {Container,Box,Typography} from '@mui/material';
 import Image from 'next/image'
 import style from '../../page.module.css';

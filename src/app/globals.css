@@ -17,14 +17,20 @@ body {
   }
 }
 
-@keyframes fade-in {
-  from {
-    background: #9BB0A5;
-    opacity: 1;
-  }
-  to {
-    background-color: #397C5D;
-    opacity: 2;
-  }
+
+@keyframes tilt-shaking {
+  0% { transform: rotate(0deg); }
+  25% { transform: rotate(5deg); }
+  50% { transform: rotate(0deg); }
+  75% { transform: rotate(-5deg); }
+  100% { transform: rotate(0deg); }
 }
 
+@keyframes skew-y-shakeing{
+  0% { transform: skewY(0deg); }
+  5% { transform: skewY(7deg);}
+  10% { transform: skewY(-3deg); color: #397c5d;}
+  15% { transform: skewY(7deg);}
+  20% { transform: skewY(0deg); color: black;}
+  100% { transform: skewY(0deg); }
+ }

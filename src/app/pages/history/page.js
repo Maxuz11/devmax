@@ -13,11 +13,11 @@ export default function History(){
       <div style={{marginBottom:5}}>
           <Home/>
           <Container maxWidth={'xl'} >
-            <Box component={'section'} sx={{display:'flex',flexDirection:{xs:'column',md:'row'},marginTop:2,boxShadow:3, alignItems:'center', padding:3,justifyContent:'space-evenly'}}>
+            <Box component={'section'} sx={{display:'flex',flexDirection:{xs:'column',md:'row'},marginTop:2,boxShadow:3, textAlign:'center', padding:3,justifyContent:'space-evenly'}}>
             {parraf.map((item)=>(
                 <div style={{marginBottom:'2rem'}} key={item.title}>
-                <Image alt={'Deku img'} src={item.img} width={200} height={100} style={{display:'flex', flexWrap:'wrap',objectFit:'contain',marginLeft:'3.5rem',marginBottom:'1.3rem',borderRadius:'10% 35%',animation:'fade-in 7s infinite'}}/>
-                <Typography variant={'5rem'} sx={{padding:'0.5rem'}} color="initial">{item.title}</Typography>
+                <Image alt={'Deku img'} src={item.img} width={200} height={100} style={{display:'flex', flexWrap:'wrap',objectFit:'contain',justifySelf:'center',marginLeft:'3.5rem',marginBottom:'1.3rem',borderRadius:'10% 35%',animation:'fade-in 7s infinite'}}/>
+                <Typography variant={'5rem'} sx={{padding:'0.5rem'}} className={'bounce'} color="initial">{item.title}</Typography>
                 <Typography component={'p'} className={style.primary} sx={{padding:'0.5rem',maxWidth:{xs:'100vw',md:'30vw'}}}>{item.desc}</Typography>
                 </div>
             ))}
